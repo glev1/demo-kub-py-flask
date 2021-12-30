@@ -12,4 +12,13 @@ test:
 build:
 	docker build -t flask-change:latest .
 	
+run:
+	docker run -p 8080:8080 flask-change
+
+invoke:
+	curl http://127.0.0.1:8080/change/1/34
+
+run-kube:
+	kubectl apply -f kube-change.yaml
+	
 all: install lint test
