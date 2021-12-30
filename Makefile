@@ -9,4 +9,7 @@ lint:
 test:
 	python -m pytest -vv --cov=app test_app.py
 	
+build:
+	docker build -t flask-change:latest .
+	
 all: install lint test
