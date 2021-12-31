@@ -11,8 +11,8 @@ This project stablish a Python Flask application service that performs money cha
 - Run ```make build``` to build the image locally
 - Run ```make run``` to run the container
 - Open a separate terminal
-  - Run ```make invoke```
-  This should return:
+  - Run ```make invoke```. It will call the change function for $1.34.
+  This should return 5 quarters, 1 nickels and 4 pennies:
   ```
   curl http://127.0.0.1:8080/change/1/34
   [
