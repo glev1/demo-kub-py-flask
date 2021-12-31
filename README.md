@@ -25,5 +25,28 @@ This project stablish a Python Flask application service that performs money cha
     {
       "4": "pennies"
     }
-  ]
-```
+  ]```
+- To stop the docker container, press ```Ctrl + C```.
+
+## Run Kubernetes Locally
+- Check Kubernetes is ready with ```kubectl get nodes```.
+- Run ```make run-kube``` to setup the load balanced service and run it.
+- Check the container is running ```kubectl get pods```
+- Describe the load balanced service: ```kubectl describe services hello-flask-change-service```
+- Invoke the endpoint ```curl http://foo:8080/change/1/34
+  - Should return again:
+  ```
+  [
+    {
+      "5": "quarters"
+    }, 
+    {
+      "1": "nickels"
+    }, 
+    {
+      "4": "pennies"
+    }
+  ]```
+  
+## Cleanup
+To cleanup the deployment of kubernetes services: ```kubectl delete deployment hello-python```
