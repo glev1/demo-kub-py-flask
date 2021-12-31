@@ -33,7 +33,7 @@ This project deploys a Python Flask microservice that performs money change. It 
 - Run ```make run-kube``` to setup the load balanced service and run it.
 - Check the container is running ```kubectl get pods```
 - Describe the load balanced service: ```kubectl describe services hello-flask-change-service```
-- Invoke the endpoint ```curl http://foo:8080/change/1/34
+- Invoke the endpoint ```curl http://foo:8080/change/1/34```
   - Should return again:
   ```
   [
