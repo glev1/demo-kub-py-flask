@@ -1,4 +1,4 @@
-# Kubernetes Python Flask Microservice
+# Containerized Flask Microservice 
 This project deploys a Python Flask microservice that performs money change. It is set to run locally with Docker or converted to Kubernetes.
 
 ## Get started
